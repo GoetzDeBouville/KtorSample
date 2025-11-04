@@ -1,11 +1,12 @@
 // DO #1: подключаем зависимости
 /**
- * Подключаем hilt, ksp, timber для логгинга и ktor
+ * Подключаем hilt, ksp, serialization, timber для логгинга и ktor
  * */
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
 }
