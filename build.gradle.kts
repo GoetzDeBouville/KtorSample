@@ -15,3 +15,9 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.ksp) apply false
 }
+
+val javaMajor = JavaVersion.valueOf(libs.versions.java.get())
+    .majorVersion
+    .toInt()
+
+extra["javaMajor"] = javaMajor

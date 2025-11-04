@@ -55,6 +55,14 @@ android {
          * */
         buildConfig = true
     }
+    
+    kotlin {
+        val javaMajor: Int by rootProject.extra
+        jvmToolchain(javaMajor)
+        compilerOptions {
+            freeCompilerArgs.add("-XXLanguage:+PropertyParamAnnotationDefaultTargetMode")
+        }
+    }
 }
 
 dependencies {
