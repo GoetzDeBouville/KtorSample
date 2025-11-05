@@ -1,4 +1,4 @@
-package com.sample.ktorsample.core.domain.models
+package com.sample.ktorsample.core.domain.models.coins
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -16,7 +16,7 @@ import kotlinx.serialization.Serializable
  *
  * Всегда лучше прописывать SerialName для каждого параметра, чтобы они не потерялись после
  * обфускации.
- * 
+ *
  * */
 @Serializable
 data class CoinModel(

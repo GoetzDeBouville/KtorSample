@@ -1,4 +1,4 @@
-package com.sample.ktorsample.core.domain.models
+package com.sample.ktorsample.core.domain.models.coins
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
