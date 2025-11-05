@@ -4,7 +4,6 @@ package com.sample.ktorsample.core.utils
 
 import kotlinx.coroutines.CancellationException
 /**
- *
  * DO #6
  * Вспомогательные функции расширения
  *
