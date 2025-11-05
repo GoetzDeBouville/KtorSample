@@ -13,6 +13,7 @@ composeBom = "2025.10.01"
 ktor = "3.3.1"
 
 hilt = "2.57.2"
+hiltNavigationCompose = "1.2.0"
 ksp = "2.2.21-2.0.4"
 
 timber = "5.0.1"
@@ -46,6 +47,8 @@ ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negoti
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
 hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
 
 # Logging
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }

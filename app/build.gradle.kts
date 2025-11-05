@@ -55,7 +55,7 @@ android {
          * */
         buildConfig = true
     }
-    
+
     kotlin {
         val javaMajor: Int by rootProject.extra
         jvmToolchain(javaMajor)
@@ -78,6 +78,7 @@ dependencies {
 //    DI
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 
 //    Logging
     implementation(libs.timber)

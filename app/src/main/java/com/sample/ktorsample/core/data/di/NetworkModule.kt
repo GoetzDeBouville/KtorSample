@@ -23,8 +23,8 @@ object NetworkModule {
     @Provides
     fun provideBinanceClient(
         factory: HttpClientFactory,
-        baseUrl: String = "https://data-api.binance.vision/api/v3/"
     ): HttpClient {
+        val baseUrl = "https://data-api.binance.vision/api/v3/"
         return factory.create(baseUrl)
     }
 }
