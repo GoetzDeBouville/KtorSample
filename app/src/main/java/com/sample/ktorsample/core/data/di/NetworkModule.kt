@@ -1,4 +1,4 @@
-package com.sample.ktorsample.core.data.models.di
+package com.sample.ktorsample.core.data.di
 
 import dagger.Module
 import dagger.Provides
@@ -10,7 +10,7 @@ import io.ktor.client.HttpClient
  * DO #10
  *
  * Создаем и пробрасываем в зависимости клиента
- * 
+ *
  * */
 @Module
 @InstallIn(SingletonComponent::class)
