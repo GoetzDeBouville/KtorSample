@@ -1,8 +1,10 @@
 package com.sample.ktorsample.feature.data.network.api
 
+import com.sample.ktorsample.core.domain.models.ErrorType
 import com.sample.ktorsample.core.domain.models.coins.CoinModel
 import com.sample.ktorsample.core.domain.models.coins.CoinShortModel
 import kotlinx.coroutines.flow.Flow
+import com.sample.ktorsample.core.domain.models.Result
 
 /**
  * DO #14
@@ -15,6 +17,6 @@ import kotlinx.coroutines.flow.Flow
  * Определим сразу те методы, которые нам понадобятся в репозитории.
  */
 interface BinanceRemoteDataSource {
-    fun getAllPrices(): Flow<List<CoinShortModel>>
-    fun get24hTicker(symbol: String): Flow<CoinModel>
+    fun getAllPrices(): Flow<Result<List<CoinShortModel>, ErrorType>>
+    fun get24hTicker(symbol: String): Flow<Result<CoinModel, ErrorType>>
 }
