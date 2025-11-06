@@ -27,6 +27,7 @@ class BinanceViewModel @Inject constructor(
         val selectedSymbol: String? = null,
         val ticker: CoinModel? = null,
         val error: ErrorType? = null,
+        val isTickerDialogVisible: Boolean = false,
     )
 
     sealed interface Intent {
@@ -34,6 +35,7 @@ class BinanceViewModel @Inject constructor(
         data class SelectSymbol(val symbol: String) : Intent
         data object RefreshTicker : Intent
         data object ClearError : Intent
+        data object DismissTickerDialog : Intent
     }
 
     private val _state = MutableStateFlow(State())
@@ -43,7 +45,6 @@ class BinanceViewModel @Inject constructor(
         viewModelScope.launch {
             loadAllPrices()
         }
-        accept(Intent.LoadAllPrices)
     }
 
     fun accept(intent: Intent) {
@@ -52,6 +53,7 @@ class BinanceViewModel @Inject constructor(
             is Intent.SelectSymbol -> selectSymbol(intent.symbol)
             is Intent.RefreshTicker -> refreshTicker()
             is Intent.ClearError -> _state.update { it.copy(error = null) }
+            is Intent.DismissTickerDialog -> _state.update { it.copy(isTickerDialogVisible = false) }
         }
     }
 
@@ -63,7 +65,7 @@ class BinanceViewModel @Inject constructor(
                 .collect { result ->
                     when (result) {
                         is Result.Success -> _state.update { it.copy(prices = result.data) }
-                        is Result.Error -> _state.update { it.copy(error = result.error) }
+                        is Result.Error   -> _state.update { it.copy(error = result.error) }
                     }
                 }
         }
@@ -74,7 +76,8 @@ class BinanceViewModel @Inject constructor(
             it.copy(
                 selectedSymbol = symbol,
                 ticker = null,
-                error = null
+                error = null,
+                isTickerDialogVisible = true
             )
         }
         refreshTicker()

@@ -41,7 +41,10 @@ class HttpClientFactory @Inject constructor() {
      * Для KMP метод будет соответственно таким:
      *
      * ```kotlin
-     *     fun create(baseUrl: String, engineFactory: HttpClientEngineFactory<HttpClientEngineConfig>): HttpClient {
+     *     fun create(
+     *              baseUrl: String,
+     *              engineFactory: HttpClientEngineFactory<HttpClientEngineConfig>
+     *         ): HttpClient {
      *         return HttpClient(engineFactory) {
      *         // ...
      *         }
