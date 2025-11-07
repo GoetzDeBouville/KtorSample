@@ -1,4 +1,4 @@
-package com.sample.ktorsample.feature.presentation
+package com.sample.ktorsample.feature.binance.presentation
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -33,7 +33,7 @@ import com.sample.ktorsample.core.presentation.uikit.BinanceError
 import com.sample.ktorsample.core.presentation.uikit.BinanceLoading
 import com.sample.ktorsample.core.presentation.uikit.PriceRow
 import com.sample.ktorsample.core.presentation.uikit.TickerDialog
-import com.sample.ktorsample.feature.presentation.BinanceViewModel.Intent
+import com.sample.ktorsample.feature.binance.presentation.BinanceViewModel.Intent
 import com.sample.ktorsample.ui.theme.KtorSampleTheme
 
 @OptIn(ExperimentalMaterial3Api::class)

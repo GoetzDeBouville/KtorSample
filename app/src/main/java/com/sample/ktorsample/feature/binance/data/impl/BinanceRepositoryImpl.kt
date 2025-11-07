@@ -1,11 +1,11 @@
-package com.sample.ktorsample.feature.data.impl
+package com.sample.ktorsample.feature.binance.data.impl
 
 import com.sample.ktorsample.core.domain.models.ErrorType
 import com.sample.ktorsample.core.domain.models.Result
 import com.sample.ktorsample.core.domain.models.coins.CoinModel
 import com.sample.ktorsample.core.domain.models.coins.CoinShortModel
-import com.sample.ktorsample.feature.data.network.api.BinanceRemoteDataSource
-import com.sample.ktorsample.feature.domain.api.BinanceRepository
+import com.sample.ktorsample.feature.binance.data.network.api.BinanceRemoteDataSource
+import com.sample.ktorsample.feature.binance.domain.api.BinanceRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

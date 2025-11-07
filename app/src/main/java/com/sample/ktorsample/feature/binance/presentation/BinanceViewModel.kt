@@ -1,4 +1,4 @@
-package com.sample.ktorsample.feature.presentation
+package com.sample.ktorsample.feature.binance.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,7 +6,7 @@ import com.sample.ktorsample.core.domain.models.ErrorType
 import com.sample.ktorsample.core.domain.models.Result
 import com.sample.ktorsample.core.domain.models.coins.CoinModel
 import com.sample.ktorsample.core.domain.models.coins.CoinShortModel
-import com.sample.ktorsample.feature.domain.api.BinanceRepository
+import com.sample.ktorsample.feature.binance.domain.api.BinanceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -65,7 +65,7 @@ class BinanceViewModel @Inject constructor(
                 .collect { result ->
                     when (result) {
                         is Result.Success -> _state.update { it.copy(prices = result.data) }
-                        is Result.Error   -> _state.update { it.copy(error = result.error) }
+                        is Result.Error -> _state.update { it.copy(error = result.error) }
                     }
                 }
         }

@@ -1,18 +1,18 @@
-package com.sample.ktorsample.feature.data.network.impl
+package com.sample.ktorsample.feature.binance.data.network.impl
 
 import com.sample.ktorsample.core.data.HttpNetworkClient
-import com.sample.ktorsample.core.domain.models.coins.CoinModel
-import com.sample.ktorsample.core.domain.models.coins.CoinShortModel
-import com.sample.ktorsample.feature.data.network.api.BinanceRemoteDataSource
-import com.sample.ktorsample.feature.data.network.impl.models.BinanceRequest
-import com.sample.ktorsample.feature.data.network.impl.models.BinanceResponse
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 import com.sample.ktorsample.core.data.models.Response
 import com.sample.ktorsample.core.data.models.mapToErrorType
 import com.sample.ktorsample.core.domain.models.ErrorType
 import com.sample.ktorsample.core.domain.models.Result
+import com.sample.ktorsample.core.domain.models.coins.CoinModel
+import com.sample.ktorsample.core.domain.models.coins.CoinShortModel
+import com.sample.ktorsample.feature.binance.data.network.api.BinanceRemoteDataSource
+import com.sample.ktorsample.feature.binance.data.network.impl.models.BinanceRequest
+import com.sample.ktorsample.feature.binance.data.network.impl.models.BinanceResponse
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
 /**
  * DO #15

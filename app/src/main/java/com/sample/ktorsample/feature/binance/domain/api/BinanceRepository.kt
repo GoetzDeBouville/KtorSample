@@ -1,4 +1,4 @@
-package com.sample.ktorsample.feature.domain.api
+package com.sample.ktorsample.feature.binance.domain.api
 
 import com.sample.ktorsample.core.domain.models.ErrorType
 import com.sample.ktorsample.core.domain.models.coins.CoinModel

@@ -5,7 +5,7 @@ package com.sample.ktorsample.core.data.models
  *
  * Добавляем бавзовые модели сетевого клиента
  * */
-open class Response<T>(
+open class Response<SealedResponse>(
     var resultCode: StatusCode = StatusCode(0),
-    var body: T? = null
+    var body: SealedResponse? = null
 )

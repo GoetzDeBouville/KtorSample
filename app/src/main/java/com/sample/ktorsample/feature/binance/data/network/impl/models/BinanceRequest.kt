@@ -1,4 +1,4 @@
-package com.sample.ktorsample.feature.data.network.impl.models
+package com.sample.ktorsample.feature.binance.data.network.impl.models
 
 /**
  * DO #12

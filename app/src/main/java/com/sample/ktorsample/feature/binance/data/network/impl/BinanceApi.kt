@@ -1,11 +1,12 @@
-package com.sample.ktorsample.feature.data.network.impl
+package com.sample.ktorsample.feature.binance.data.network.impl
 
 import android.content.Context
 import com.sample.ktorsample.core.data.HttpKtorNetworkClient
 import com.sample.ktorsample.core.domain.models.coins.CoinModel
 import com.sample.ktorsample.core.domain.models.coins.CoinShortModel
-import com.sample.ktorsample.feature.data.network.impl.models.BinanceRequest
-import com.sample.ktorsample.feature.data.network.impl.models.BinanceResponse
+import com.sample.ktorsample.feature.binance.data.network.impl.models.BinanceRequest
+import com.sample.ktorsample.feature.binance.data.network.impl.models.BinanceResponse
+import dagger.hilt.android.qualifiers.ApplicationContext
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -26,7 +27,7 @@ import javax.inject.Inject
  *
  */
 class BinanceApi @Inject constructor(
-    context: Context,
+    @ApplicationContext context: Context,
     private val httpClient: HttpClient
 ) : HttpKtorNetworkClient<BinanceRequest, BinanceResponse>(context) {
 
